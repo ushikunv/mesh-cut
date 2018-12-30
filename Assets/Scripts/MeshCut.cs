@@ -18,6 +18,7 @@ public class MeshCut : MonoBehaviour
 
     void Start()
     {
+        //tagをつけてgame controllerで管理
         this.tag = "obj";
         //連続で切ってしまわないように少し遅らせる。適宜調整する
         Invoke("BoolOn", 0.2f);
