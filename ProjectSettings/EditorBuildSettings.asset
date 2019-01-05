@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Scenes/NewCutTest.unity
+    guid: 7496b8a2552b20c4687f48b7a151e610
+  - enabled: 1
+    path: Assets/Scenes/VRCutTest.unity
+    guid: 01df04c787f70df41800b9c7f4eeff02
+  m_configObjects: {}
