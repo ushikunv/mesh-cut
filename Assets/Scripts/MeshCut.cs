@@ -10,7 +10,7 @@ public class MeshCut : MonoBehaviour
     private Mesh attachedMesh;
     private bool coliBool = false;
     private double delta = 0.000000001f;
-    private float skinWidth = 0.005f;
+    private float skinWidth = 0.05f;
     private int returnCount = 0;
     private bool returnBool = false;
     private bool returnBool2 = false;
@@ -441,8 +441,7 @@ public class MeshCut : MonoBehaviour
         obj.GetComponent<MeshFilter>().mesh = mesh;
         obj.GetComponent<MeshRenderer>().materials = GetComponent<MeshRenderer>().materials;
         obj.GetComponent<MeshCollider>().sharedMesh = mesh;
-        obj.GetComponent<MeshCollider>().inflateMesh = true;
-        obj.GetComponent<MeshCollider>().skinWidth = skinWidth;
+        obj.GetComponent<MeshCollider>().cookingOptions = MeshColliderCookingOptions.CookForFasterSimulation;
         obj.GetComponent<MeshCollider>().convex = true;
         obj.GetComponent<MeshCollider>().material = GetComponent<Collider>().material;
         obj.transform.position = transform.position;
@@ -461,8 +460,7 @@ public class MeshCut : MonoBehaviour
         obj2.GetComponent<MeshFilter>().mesh = mesh2;
         obj2.GetComponent<MeshRenderer>().materials = GetComponent<MeshRenderer>().materials;
         obj2.GetComponent<MeshCollider>().sharedMesh = mesh2;
-        obj2.GetComponent<MeshCollider>().inflateMesh = true;
-        obj2.GetComponent<MeshCollider>().skinWidth = skinWidth;
+        obj2.GetComponent<MeshCollider>().cookingOptions = MeshColliderCookingOptions.CookForFasterSimulation;
         obj2.GetComponent<MeshCollider>().convex = true;
         obj2.GetComponent<MeshCollider>().material = GetComponent<Collider>().material;
         obj2.transform.position = transform.position;
